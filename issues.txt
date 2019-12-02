@@ -1,0 +1,55 @@
+1) Set ad marker is not working properly on https://www.cnn.com/ or https://www.people.com/ or https://timesofindia.indiatimes.com. 
+
+2) When I click on ad and select paste ad option, it shows popup asking for link, however if I go to different page to copy ad then come back to target site, original ad has been gone and in context menu, I only see option of "Take a Screenshot" and original ad itself become blank. If user don't paste value and skip, we should ignore this event.
+
+We should always have all our option available in context-menu. 
+
+3) Sometime our extension encounter some error and it seems stops working. Our extension should work even though error occurs. If any error occurs while pasting ad tag, we should catch is clear it. All actions should have try catch block so. When exception occur please show error message in console.
+
+4) Restrict Pasting to one iframe on	
+
+5) Download file name need to be formatted in following format:
+[DOMAIN NAME]-[DATE TIME].jpg
+eg. cnn.com-2019_10_23_13_12_35.jpg
+
+6) User should be able copy Ad tag from following links: 
+-> https://displayvideo.google.com/doubleclick/preview/main?creativeId=xbid.181463214&adv=4411331&flexHeight=250&flexWidth=300
+-> https://displayvideo.google.com/doubleclick/preview/main?creativeId=xbid.180616322&adv=332862&flexHeight=250&flexWidth=300
+-> https://preview-desk.thetradedesk.com/Creatives/ClickTrackingPreview?CreativeId=e7ujqcgv&Token=45d891dd3b6e71ad9d9774046ac2b2c8&IsShare=True
+-> https://preview-desk.thetradedesk.com/Creatives/ClickTrackingPreview?CreativeId=2zhz8ziz&Token=846ce29a20dbcf8084f2f4b159109077&IsShare=True
+-> https://admanagerplus.yahoo.com/preview/share/PuhJ-Oe3NwJLi8YIKFF0rJgDe4a2NlrXQUkvN6NGPiw
+-> https://admanagerplus.yahoo.com/preview/share/PuhJ-Oe3NwLwAQTATG0S3gXCO9vlZ7_mW_WEW_T9SBE
+-> https://admanagerplus.yahoo.com/preview/share/t8FPYZ1n6xYZIEVziwbRgVgKZMqFGaNy9MKnIxLgIWo
+-> https://admanagerplus.yahoo.com/preview/share/t8FPYZ1n6xZvbPUkhHSRWkyxV87iFq2GmSZf4f0B5Js
+-> https://admanagerplus.yahoo.com/preview/share/t8FPYZ1n6xajdCtUUYOf0nugcSLDdw0DetjaI9f3DtY
+-> https://admanagerplus.yahoo.com/preview/share/t8FPYZ1n6xbcKRbhH2uhpV6OrSR0rD6h5rEuMMxjNhY
+
+
+7) Extension context-menu disappears after setting ad markers on this sites. https://www.cnn.com/ or https://www.people.com/ or https://timesofindia.indiatimes.com. 
+
+For point 4) paste to only those iframe where iframe dimensions are matching.
+
+8) Write copy ad tag function code in following format
+
+if url contains .google.com
+get this iframe1
+
+if url contains .yahoo.com
+get this iframe2
+
+if url contains thetradedesk.com
+get this iframe3
+
+if url contains xyz.com
+get this iframe4
+
+
+Solved Issues: 1, 2
+Pending issues are 3, 4, 5, 6, 7, 8
+
+
+
+https://displayvideo.google.com/doubleclick/preview/main?creativeId=xbid.180616322&adv=332862&flexHeight=250&flexWidth=300
+
+<iframe id='iframe_1571960571678187' name='iframe_1571960571678187' width='0' height='0' src='https://cdn3.doubleverify.com/t2tv7.html' style='display: none;'>  </iframe>
+  </iframe>
