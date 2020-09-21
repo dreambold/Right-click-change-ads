@@ -1,1 +1,1 @@
-# Right-click-chnage-ads
+# Right-click-change-ads
